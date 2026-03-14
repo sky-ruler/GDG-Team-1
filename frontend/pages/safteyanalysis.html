@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhubaneswar - Crime & Safety Dashboard</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="../css/safteyanalysis.css">
+</head>
+<body>
+
+    <div class="top-nav">
+         <div class="user-profile"> 
+            <span>Nikhil Kumar</span>
+            <img src="../resources/nikhil.jpg" alt="Nikhil Profile">
+        </div>
+        <div class="sub-nav">
+            <div class="sub-nav-left">
+                 <span>Welcome back, Nikhil</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        Bhubaneswar - Crime & Safety Dashboard
+    </header>
+
+    <main class="dashboard-container">
+        <section class="section-box trend-section">
+            <div class="section-title">Crime Trend (Historical)</div>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-box bar-section">
+            <div class="section-title">Top Offenses by Crime Count</div>
+            <div class="chart-container">
+                <canvas id="offensesChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-box safety-section">
+            <div class="section-title">Area Safety Score</div>
+            <div class="chart-container" style="display: flex; justify-content: center; align-items: center;">
+                <canvas id="safetyChart" style="max-width: 90%; max-height: 90%;"></canvas>
+                <div class="chart-center-text gauge-text">
+                    <h3>82</h3>
+                    <p>Good</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-box donut-section">
+            <div class="section-title">Incidents by Status</div>
+            <div class="chart-container" style="display: flex; justify-content: center; align-items: center;">
+                <canvas id="statusChart" style="max-width: 80%; max-height: 80%;"></canvas>
+                <div class="chart-center-text donut-text">
+                    <h3>3,866</h3>
+                    <p>Total Crimes</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-box map-section">
+            <button id="expandBtn" class="expand-btn" title="Expand Map">&#9974;</button>
+            <div id="map"></div>
+        </section>
+
+        <section class="section-box contrib-section">
+            <div class="section-title">Community Contributions</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>1,245</h4>
+                    <p>Total Reports</p>
+                </div>
+                <div class="stat-card">
+                    <h4>89%</h4>
+                    <p>Verification Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h4>342</h4>
+                    <p>Active Contributors</p>
+                </div>
+                <div class="stat-card">
+                    <h4>+12%</h4>
+                    <p>MoM Engagement</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Scripts/safteyanalysis.js"></script>
+</body>
+</html>
