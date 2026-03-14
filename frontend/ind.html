@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><strong>SafetyApp</strong></div>
+        <nav class="nav-links" id="navMenu">
+            <a href="#"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-route"></i> Routes</a>
+            <a href="#"><i class="fas fa-comment-alt"></i> SOS</a>
+            <a href="#" class="active"><i class="fas fa-address-book"></i> Contacts</a>
+        </nav>
+        <div class="profile">Profile <i class="fas fa-chevron-down"></i></div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Emergency Contacts</h1>
+            <p>Manage people who should be alerted during emergencies.</p>
+        </section>
+
+        <div class="toolbar">
+            <button class="btn-add"><i class="fas fa-plus"></i> Add Contact</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search contacts..." onkeyup="filterContacts()">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="contact-group">
+            <div class="group-header">
+                <i class="fas fa-star primary-star"></i> Primary Guardian
+            </div>
+            <div class="contact-row contact-item">
+                <div class="contact-info">
+                    <img src="image.jpg" alt="John" class="avatar">
+                    <div class="details">
+                        <h4 class="name">Vivek</h4>
+                        <p>+91 99396 15022</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-blue"><i class="fas fa-phone"></i> Call</button>
+                    <button class="btn btn-blue"><i class="fas fa-comment"></i> Message</button>
+                    <button class="btn btn-outline"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-group">
+            <div class="group-header">Family</div>
+            <div class="contact-row contact-item">
+                <div class="contact-info">
+                    <img src="image.jpg" alt="Mom" class="avatar">
+                    <div class="details">
+                        <h4 class="name">Mom</h4>
+                        <p>+91 90000 12345</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-blue">Call</button>
+                    <button class="btn btn-blue">Message</button>
+                    <button class="btn btn-outline">Edit</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+            </div>
+            <div class="contact-row contact-item">
+                <div class="contact-info">
+                    <img src="image.jpg" alt="Dad" class="avatar">
+                    <div class="details">
+                        <h4 class="name">Dad</h4>
+                        <p>+91 90000 67890</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-blue">Call</button>
+                    <button class="btn btn-blue">Message</button>
+                    <button class="btn btn-outline">Edit</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        &copy; 2026 SafetyApp Dashboard. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
