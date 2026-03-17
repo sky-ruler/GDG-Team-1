@@ -1,7 +1,7 @@
-const greenDark = '#445c48';
-const greenMed = '#7a9675';
-const greenLight = '#c5d3c1';
-const greyLight = '#e0e0e0';
+const greenDark = '#022038';
+const greenMed = '#14B8A6';
+const greenLight = '#99f6e4';
+const greyLight = '#E5E7EB';
 
 // Trend Chart
 const ctxTrend = document.getElementById('trendChart').getContext('2d');

@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
+    background-color: #F0F4FA;
     color: #333;
 }
 
@@ -16,7 +16,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 10px 30px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #E5E7EB;
     gap: 25px;
 }
 
@@ -42,7 +42,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #E5E7EB;
     font-size: 13px;
     color: #555;
 }
@@ -59,16 +59,16 @@ body {
     align-items: center;
     width: 35px;
     height: 35px;
-    background-color: #f0f4f1;
-    border: 1px solid #dce4de;
+    background-color: #F0F4FA;
+    border: 1px solid #E5E7EB;
     border-radius: 8px;
     font-size: 18px;
     color: #555;
 }
 
 .main-header {
-    background-color: #445c48;
-    color: #e8ede3;
+    background-color: #022038;
+    color: white;
     text-align: right;
     padding: 20px 40px;
     font-size: 28px;
@@ -101,9 +101,9 @@ body {
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #2c3e33;
+    color: #022038;
     text-align: center;
-    border-bottom: 2px solid #e8ede3;
+    border-bottom: 2px solid #E5E7EB;
     padding-bottom: 8px;
 }
 
@@ -140,7 +140,7 @@ body {
 .donut-text p { margin: 0; font-size: 12px; color: #666; }
 
 .gauge-text { top: 65%; } 
-.gauge-text h3 { margin: 0; font-size: 42px; color: #445c48; }
+.gauge-text h3 { margin: 0; font-size: 42px; color: #022038; }
 .gauge-text p { margin: 0; font-size: 14px; color: #888; font-weight: bold; }
 
 .stats-grid {
@@ -152,8 +152,8 @@ body {
 }
 
 .stat-card {
-    background-color: #f8faf9;
-    border: 1px solid #e8ede3;
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ body {
     padding: 10px;
 }
 
-.stat-card h4 { margin: 0; font-size: 24px; color: #445c48; }
+.stat-card h4 { margin: 0; font-size: 24px; color: #022038; }
 .stat-card p { margin: 5px 0 0 0; font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;}
 
 .expand-btn {
