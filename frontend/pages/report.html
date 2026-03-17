@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident - SafePath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../css/report.css">
+</head>
+<body>
+    <header class="header">
+        <div id="logo">LOGO</div>
+        <nav class="Nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="route-analysis.html">Routes</a>
+            <a href="safteyanalysis.html">Safety Analytics</a>
+            <a href="report.html">Report</a>
+            <a href="sos-center.html">SOS Center</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+        <button class="loginbtn">Login / Sign Up</button>
+    </header>
+
+    <div class="report-container">
+        <div class="report-header">
+            <h1>Report an Incident</h1>
+            <p>Your contribution keeps the community safe. Please provide accurate details below.</p>
+        </div>
+
+        <div class="report-content">
+            <!-- Form Section -->
+            <div class="report-form-section">
+                <form id="incidentForm" class="incident-form">
+                    
+                    <div class="form-group">
+                        <label for="incidentType">Incident Type</label>
+                        <select id="incidentType" required>
+                            <option value="">Select an incident type</option>
+                            <option value="theft">Theft / Robbery</option>
+                            <option value="harassment">Harassment / Eve-teasing</option>
+                            <option value="suspicious">Suspicious Activity</option>
+                            <option value="poor_lighting">Poor Lighting / Broken Streetlight</option>
+                            <option value="accident">Accident</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Severity Level</label>
+                        <div class="severity-options">
+                            <label class="severity-label low">
+                                <input type="radio" name="severity" value="low" required> Low Risk (e.g., Poor lighting)
+                            </label>
+                            <label class="severity-label medium">
+                                <input type="radio" name="severity" value="medium"> Moderate (e.g., Harassment)
+                            </label>
+                            <label class="severity-label high">
+                                <input type="radio" name="severity" value="high"> High Risk (e.g., Theft, Assault)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-time">Date & Time</label>
+                        <input type="datetime-local" id="date-time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Detailed Description</label>
+                        <textarea id="description" rows="4" placeholder="Describe the incident (optional)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <p class="location-help">Click on the map to mark the exact location, or let us use your current location.</p>
+                        <input type="text" id="location-coords" readonly placeholder="Select a point on the map" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitReportBtn">Submit Report</button>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <div class="report-map-section">
+                <div class="map-overlay-title">Pin Location</div>
+                <div id="report-map"></div>
+                <button type="button" id="currentLocationBtn" class="location-btn">Use Current Location</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="success-icon">&#10003;</div>
+            <h2>Report Submitted!</h2>
+            <p>Thank you for contributing to SafePath. Your report is under review and will help make routes safer for everyone.</p>
+            <button class="modal-btn" onclick="document.getElementById('successModal').style.display='none'">Close</button>
+        </div>
+    </div>
+
+    <script src="../Scripts/report.js"></script>
+</body>
+</html>

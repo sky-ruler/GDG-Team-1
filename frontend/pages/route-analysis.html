@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Analysis - SafePath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../css/route-analysis.css">
+</head>
+<body>
+    <header class="header">
+        <div id="logo">LOGO</div>
+        <nav class="Nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="route-analysis.html">Routes</a>
+            <a href="safteyanalysis.html">Safety Analytics</a>
+            <a href="report.html">Report</a>
+            <a href="sos-center.html">SOS Center</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+        <button class="loginbtn">Login / Sign Up</button>
+    </header>
+
+    <div class="route-container">
+        <!-- Sidebar for Route Selection -->
+        <aside class="route-sidebar">
+            <div class="search-section">
+                <h2>Find Route</h2>
+                <div class="search-box">
+                    <input type="text" id="start-loc" placeholder="Start Location (e.g., Kalinga Stadium)">
+                    <input type="text" id="end-loc" placeholder="Destination (e.g., Patia)">
+                    <button id="search-routes-btn">Analyze Routes</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h3>Alternative Routes</h3>
+                <div class="route-card recommended">
+                    <div class="route-header">
+                        <h4>Route 1 (Safest)</h4>
+                        <span class="badge green">94% Safe</span>
+                    </div>
+                    <div class="route-stats">
+                        <p><strong>Time:</strong> 24 mins</p>
+                        <p><strong>Distance:</strong> 12 km</p>
+                        <p><strong>Risk Factors:</strong> Well Lit, Heavy Traffic</p>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-header">
+                        <h4>Route 2 (Fastest)</h4>
+                        <span class="badge yellow">76% Safe</span>
+                    </div>
+                    <div class="route-stats">
+                        <p><strong>Time:</strong> 18 mins</p>
+                        <p><strong>Distance:</strong> 9.5 km</p>
+                        <p><strong>Risk Factors:</strong> Low Lighting near CRP Square</p>
+                    </div>
+                </div>
+                
+                <div class="route-card">
+                    <div class="route-header">
+                        <h4>Route 3 (Shortest)</h4>
+                        <span class="badge red">45% Safe</span>
+                    </div>
+                    <div class="route-stats">
+                        <p><strong>Time:</strong> 22 mins</p>
+                        <p><strong>Distance:</strong> 8.2 km</p>
+                        <p><strong>Risk Factors:</strong> Isolated Area, 3 Reported Incidents</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="risk-breakdown">
+                <h3>Risk Breakdown</h3>
+                <ul class="risk-list">
+                    <li><span class="dot red"></span> High Crime Area (2 spots)</li>
+                    <li><span class="dot yellow"></span> Poor Lighting (1.2 km stretch)</li>
+                    <li><span class="dot green"></span> Police Presence (3 booths)</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Map Area -->
+        <main class="map-area">
+            <div class="map-controls">
+                <label><input type="checkbox" id="heatmapToggle" checked> Toggle Heatmap</label>
+                <label><input type="checkbox" id="incidentsToggle" checked> Show Incidents</label>
+            </div>
+            <div id="route-map"></div>
+        </main>
+    </div>
+
+    <script src="../Scripts/route-analysis.js"></script>
+</body>
+</html>

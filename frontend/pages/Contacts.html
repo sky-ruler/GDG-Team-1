@@ -6,21 +6,21 @@
     <title>Emergency Contacts Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/Contacts.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo"><strong>SafetyApp</strong></div>
-        <nav class="nav-links" id="navMenu">
-            <a href="#"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="#"><i class="fas fa-route"></i> Routes</a>
-            <a href="#"><i class="fas fa-comment-alt"></i> SOS</a>
-            <a href="#" class="active"><i class="fas fa-address-book"></i> Contacts</a>
+    <header class="header">
+        <div id="logo">LOGO</div>
+        <nav class="Nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="route-analysis.html">Routes</a>
+            <a href="safteyanalysis.html">Safety Analytics</a>
+            <a href="report.html">Report</a>
+            <a href="sos-center.html">SOS Center</a>
+            <a href="profile.html">Profile</a>
         </nav>
-        <div class="profile">Profile <i class="fas fa-chevron-down"></i></div>
-        
-        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <button class="loginbtn">Login / Sign Up</button>
     </header>
 
     <main class="container">
@@ -94,8 +94,32 @@
         
     </main>
 
-    <footer>
-        &copy; 2026 SafetyApp Dashboard. All rights reserved.
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_brand">
+                <h3>LOGO</h3>
+                <p>AI-powered safety navigation platform helping users make safer mobility decisions.</p>
+            </div>
+            <div class="footer_links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Dashboard</a>
+                <a href="#">Routes</a>
+                <a href="#">Safety Analytics</a>
+                <a href="sos-center.html">SOS Center</a>
+            </div>
+
+            <div class="footer_support">
+                <h4>Support</h4>
+                <p>Email: support@safepath.com</p>
+                <p>Emergency Help: 112</p>
+            </div>
+
+        </div>
+
+        <div class="footer_bottom">
+            <p>© 2026 LOGO | Built for safer mobility</p>
+        </div>
+
     </footer>
 
     <script src="../Scripts/script.js"></script>

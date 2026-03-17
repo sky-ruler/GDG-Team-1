@@ -7,18 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
 </head>
 <body>
     <header class="header">
         <div id="logo">LOGO</div>
         <nav class="Nav">
-            <a href="index.html">Dashboard</a>
-            <a href="">Routes</a>
-            <a href="">Safety Analytics</a>
-            <a href="">Report</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="route-analysis.html">Routes</a>
+            <a href="safteyanalysis.html">Safety Analytics</a>
+            <a href="report.html">Report</a>
             <a href="sos-center.html">SOS Center</a>
-            <a href="">Profile</a>
+            <a href="profile.html">Profile</a>
         </nav>
         <button class="loginbtn">Login / Sign Up</button>
     </header>
@@ -42,10 +45,9 @@
         </div>
     </section>
     <section class="dashboard_main">
-        <div class="map_container">
-            <div class="map_placeholder">
-                MAP VIEW
-            </div>
+        <div class="map_container map-section">
+            <button id="expandBtn" class="expand-btn" title="Expand Map">&#9974;</button>
+            <div id="map"></div>
         </div>
         <div class="risk_panel">
             <h3>Area Risk Indicators</h3>
@@ -95,5 +97,35 @@
         </div>
 
     </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <!-- Chat toggle button -->
+        <button class="chatbot-toggle" id="chatToggleBtn" title="SafePath Assistant">
+            &#128172;
+        </button>
+
+        <!-- Chat window -->
+        <div class="chatbot-window" id="chatWindow">
+            <div class="chatbot-header">
+                <h3>SafePath AI Guide</h3>
+                <button class="chatbot-close" id="chatCloseBtn">&times;</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot">
+                    Hello! I'm your SafePath assistant. I can help you find safe routes, understand risk indicators, or guide you through reporting an incident. How can I help you today?
+                </div>
+            </div>
+
+            <form class="chatbot-input" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type a message..." required autocomplete="off">
+                <button type="submit">&#8594;</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../Scripts/dashboard.js"></script>
+    <script src="../Scripts/chatbot.js"></script>
 </body>
 </html>

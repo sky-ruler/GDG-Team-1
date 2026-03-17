@@ -204,3 +204,56 @@ body {
     box-shadow: none;
     text-shadow: none;
 }
+
+/* ===== Navbar from Dashboard ===== */
+.header{
+background:#022038;
+height:72px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+z-index: 1000;
+}
+
+#logo{
+color:white;
+font-size:18px;
+font-weight:600;
+position:absolute;
+left:40px;
+}
+
+.Nav{
+display:flex;
+gap:35px;
+}
+
+.Nav a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:0.2s;
+}
+
+.Nav a:hover{
+color:#14B8A6;
+}
+
+.loginbtn{
+position:absolute;
+right:40px;
+width:150px;
+height:40px;
+background:#14B8A6;
+border:none;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+.Nav{
+display:none;
+}
+}
