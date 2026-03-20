@@ -7,11 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/Contacts.css">
+    <link rel="stylesheet" href="../css/floating_sos.css">
+    <link rel="stylesheet" href="../css/nav_profile.css">
 </head>
 <body>
 
     <header class="header">
-        <div id="logo">LOGO</div>
+        <img id="logo" src="../resources/logo.png" alt="Safety Path Logo">
         <nav class="Nav">
             <a href="dashboard.html">Dashboard</a>
             <a href="route-analysis.html">Routes</a>
@@ -20,7 +22,14 @@
             <a href="sos-center.html">SOS Center</a>
             <a href="profile.html">Profile</a>
         </nav>
-        <button class="loginbtn">Login / Sign Up</button>
+                <div class="user-profile">
+            <img src="../resources/nikhil.jpg" alt="User Profile" class="profile-pic">
+                        <span class="user-name">Welcome back, Nikhil</span>
+            <div class="profile-dropdown">
+
+                <a href="login.html">Log Out</a>
+            </div>
+        </div>
     </header>
 
     <main class="container">
@@ -97,7 +106,7 @@
     <footer class="footer">
         <div class="footer_container">
             <div class="footer_brand">
-                <h3>LOGO</h3>
+                <img src="../resources/logo.png" alt="Safety Path Logo" class="footer_brand_logo">
                 <p>AI-powered safety navigation platform helping users make safer mobility decisions.</p>
             </div>
             <div class="footer_links">
@@ -117,11 +126,13 @@
         </div>
 
         <div class="footer_bottom">
-            <p>© 2026 LOGO | Built for safer mobility</p>
+            <p>© 2026 Safety Path | Built for safer mobility</p>
         </div>
 
     </footer>
 
     <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/nav.js"></script>
+    <button class="floating_sos" onclick="alert('SOS Triggered! Location and audio shared with emergency contacts.')">SOS</button>
 </body>
 </html>

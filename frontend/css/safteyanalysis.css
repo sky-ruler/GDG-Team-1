@@ -221,7 +221,7 @@ color:white;
 font-size:18px;
 font-weight:600;
 position:absolute;
-left:40px;
+left:20px;
 }
 
 .Nav{
@@ -252,8 +252,81 @@ color:white;
 cursor:pointer;
 }
 
-@media(max-width:900px){
-.Nav{
-display:none;
+/* New styles for menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 1001;
 }
+
+@media(max-width:900px){
+
+.header {
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.Nav{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: -100%;
+    width: 250px;
+    height: calc(100vh - 72px);
+    background: #022038;
+    padding: 20px;
+    gap: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.Nav.active {
+    left: 0;
+}
+
+.loginbtn{
+    display: none;
+}
+
+.dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "trend"
+        "bar"
+        "safety"
+        "donut"
+        "map"
+        "contrib";
+}
+
+.stats-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.top-nav {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sub-nav {
+    flex-direction: column;
+    gap: 15px;
+}
+
+}
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }

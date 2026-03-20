@@ -136,3 +136,18 @@ body {
     font-size: 13px;
     color: #022038 !important;
 }
+
+/* ===== Responsive ===== */
+@media(max-width: 600px) {
+    .auth-box {
+        padding: 30px 20px;
+    }
+}
+
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}

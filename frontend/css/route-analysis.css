@@ -30,7 +30,7 @@ body {
     font-size:18px;
     font-weight:600;
     position:absolute;
-    left:40px;
+    left:20px;
 }
 
 .Nav{
@@ -255,4 +255,84 @@ body {
     cursor: pointer;
     color: #022038;
     font-weight: 500;
+}
+
+/* New styles for menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 1001;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px) {
+    .header {
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .Nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 72px);
+        background: #022038;
+        padding: 20px;
+        gap: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .Nav.active {
+        left: 0;
+    }
+
+    .loginbtn {
+        display: none;
+    }
+    
+    .route-container {
+        flex-direction: column;
+        overflow-y: auto; 
+    }
+
+    .route-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #E5E7EB;
+        max-height: 50vh;
+    }
+
+    .map-area {
+        min-height: 50vh;
+        padding: 20px;
+        background-color: #F0F4FA;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #route-map {
+        flex: 1;
+        border-radius: 12px;
+        min-height: 350px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+}
+
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }

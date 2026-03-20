@@ -8,13 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/floating_sos.css">
+    <link rel="stylesheet" href="../css/nav_profile.css">
 </head>
 <body>
     <div class="admin-layout">
         <!-- Vertical Sidebar -->
         <aside class="admin-sidebar">
             <div class="admin-brand">
-                <span class="logo">LOGO</span>
+                <img src="../resources/logo.png" alt="Safety Path Logo" class="logo">
                 <span class="badge">Admin Hub</span>
             </div>
             
@@ -162,5 +164,7 @@
 
     <!-- Admin Validation JS logic -->
     <script src="../Scripts/admin.js"></script>
+    <script src="../Scripts/nav.js"></script>
+    <button class="floating_sos" onclick="alert('SOS Triggered! Location and audio shared with emergency contacts.')">SOS</button>
 </body>
 </html>

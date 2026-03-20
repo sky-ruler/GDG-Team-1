@@ -1,0 +1,98 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.user-profile .profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-profile .user-name {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* User Profile Dropdown Menu */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 55px; /* Adjust depending on header height */
+    right: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    min-width: 160px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.profile-dropdown.active {
+    display: flex;
+}
+
+.profile-dropdown a {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #4B5563; /* Text color matching design pattern */
+    font-size: 15px;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-dropdown a:hover {
+    background: #F3F4F6;
+    color: #14B8A6; /* Primary color */
+}
+
+/* Add a tiny separator if needed */
+.profile-dropdown a:not(:last-child) {
+    border-bottom: 1px solid #E5E7EB;
+}
+
+@media(max-width:900px) {
+    .user-profile {
+        display: none;
+    }
+}
+
+/* Global Button Responsiveness */
+button, .btn {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease, background-color 0.2s ease !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+button:active, .btn:active {
+    transform: translateY(1px) scale(0.96);
+    filter: brightness(0.95);
+}
+
+@media (max-width: 768px) {
+    button, .btn {
+        touch-action: manipulation;
+    }
+}
+
+
+
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}

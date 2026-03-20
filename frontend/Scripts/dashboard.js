@@ -32,3 +32,9 @@ expandBtn.addEventListener('click', () => {
         map.invalidateSize();
     }, 350); 
 });
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 100);
+});

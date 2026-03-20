@@ -2,7 +2,7 @@
 .chatbot-widget {
     position: fixed;
     bottom: 30px;
-    right: 120px; /* Offset from the SOS button */
+    right: 30px;
     z-index: 9999;
     font-family: 'Inter', sans-serif;
 }
@@ -155,6 +155,14 @@
 @media(max-width: 600px) {
     .chatbot-widget {
         right: 20px;
-        bottom: 110px;
+        bottom: 20px;
     }
+}
+
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }

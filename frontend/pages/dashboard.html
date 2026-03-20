@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safety Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +12,13 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="stylesheet" href="../css/floating_sos.css">
+    <link rel="stylesheet" href="../css/nav_profile.css">
 </head>
+
 <body>
     <header class="header">
-        <div id="logo">LOGO</div>
+        <img id="logo" src="../resources/logo.png" alt="Safety Path Logo">
         <nav class="Nav">
             <a href="dashboard.html">Dashboard</a>
             <a href="route-analysis.html">Routes</a>
@@ -23,7 +27,14 @@
             <a href="sos-center.html">SOS Center</a>
             <a href="profile.html">Profile</a>
         </nav>
-        <button class="loginbtn">Login / Sign Up</button>
+                <div class="user-profile">
+            <img src="../resources/nikhil.jpg" alt="User Profile" class="profile-pic">
+                        <span class="user-name">Welcome back, Nikhil</span>
+            <div class="profile-dropdown">
+
+                <a href="login.html">Log Out</a>
+            </div>
+        </div>
     </header>
     <section class="hero_section">
         <div class="hero_left">
@@ -31,7 +42,7 @@
             <p>AI-powered preventive safety platform for smarter mobility decisions.</p>
             <div class="hero_buttons">
                 <button class="start_safebtn">Start Safe Journey</button>
-                <button class="sosbtn">Emergency SOS</button>
+                <button class="sosbtn" onclick="alert('SOS Triggered! Location and audio shared with emergency contacts.')">Emergency SOS</button>
             </div>
         </div>
     </section>
@@ -68,12 +79,12 @@
         </div>
     </section>
 
-    <button class="floating_sos">SOS</button>
-    
+
+
     <footer class="footer">
         <div class="footer_container">
             <div class="footer_brand">
-                <h3>LOGO</h3>
+                <img src="../resources/logo.png" alt="Safety Path Logo" class="footer_brand_logo">
                 <p>AI-powered safety navigation platform helping users make safer mobility decisions.</p>
             </div>
             <div class="footer_links">
@@ -93,7 +104,7 @@
         </div>
 
         <div class="footer_bottom">
-            <p>© 2026 LOGO | Built for safer mobility</p>
+            <p>© 2026 Safety Path | Built for safer mobility</p>
         </div>
 
     </footer>
@@ -111,10 +122,11 @@
                 <h3>SafePath AI Guide</h3>
                 <button class="chatbot-close" id="chatCloseBtn">&times;</button>
             </div>
-            
+
             <div class="chatbot-messages" id="chatMessages">
                 <div class="message bot">
-                    Hello! I'm your SafePath assistant. I can help you find safe routes, understand risk indicators, or guide you through reporting an incident. How can I help you today?
+                    Hello! I'm your SafePath assistant. I can help you find safe routes, understand risk indicators, or
+                    guide you through reporting an incident. How can I help you today?
                 </div>
             </div>
 
@@ -127,5 +139,7 @@
 
     <script src="../Scripts/dashboard.js"></script>
     <script src="../Scripts/chatbot.js"></script>
+    <script src="../Scripts/nav.js"></script>
 </body>
+
 </html>

@@ -11,49 +11,49 @@ body {
 }
 
 /* Navbar (Copied for consistency) */
-.header{
-    background:#022038;
-    height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
+.header {
+    background: #022038;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-#logo{
-    color:white;
-    font-size:18px;
-    font-weight:600;
-    position:absolute;
-    left:40px;
+#logo {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    left: 20px;
 }
 
-.Nav{
-    display:flex;
-    gap:35px;
+.Nav {
+    display: flex;
+    gap: 35px;
 }
 
-.Nav a{
-    text-decoration:none;
-    color:white;
-    font-size:16px;
-    transition:0.2s;
+.Nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.2s;
 }
 
-.Nav a:hover{
-    color:#14B8A6;
+.Nav a:hover {
+    color: #14B8A6;
 }
 
-.loginbtn{
-    position:absolute;
-    right:40px;
-    width:150px;
-    height:40px;
-    background:#14B8A6;
-    border:none;
-    border-radius:6px;
-    color:white;
-    cursor:pointer;
+.loginbtn {
+    position: absolute;
+    right: 40px;
+    width: 150px;
+    height: 40px;
+    background: #14B8A6;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Report Content Layout */
@@ -83,7 +83,7 @@ body {
     display: flex;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     min-height: 600px;
 }
@@ -150,9 +150,17 @@ body {
     background: #F8FAFC;
 }
 
-.severity-label.low { border-left: 4px solid #10B981; }
-.severity-label.medium { border-left: 4px solid #F59E0B; }
-.severity-label.high { border-left: 4px solid #EF4444; }
+.severity-label.low {
+    border-left: 4px solid #10B981;
+}
+
+.severity-label.medium {
+    border-left: 4px solid #F59E0B;
+}
+
+.severity-label.high {
+    border-left: 4px solid #EF4444;
+}
 
 .location-help {
     font-size: 13px;
@@ -223,7 +231,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.2s;
 }
 
@@ -241,7 +249,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
 }
@@ -266,7 +274,9 @@ body {
     cursor: pointer;
 }
 
-.close-btn:hover { color: #333; }
+.close-btn:hover {
+    color: #333;
+}
 
 .success-icon {
     font-size: 50px;
@@ -274,8 +284,16 @@ body {
     margin-bottom: 20px;
 }
 
-.modal-content h2 { margin-bottom: 15px; color: #022038; }
-.modal-content p { color: #64748B; margin-bottom: 25px; line-height: 1.5; }
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #022038;
+}
+
+.modal-content p {
+    color: #64748B;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
 
 .modal-btn {
     background: #022038;
@@ -285,4 +303,69 @@ body {
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
+}
+
+/* New styles for menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 1001;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px) {
+    .header {
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .Nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 72px);
+        background: #022038;
+        padding: 20px;
+        gap: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .Nav.active {
+        left: 0;
+    }
+
+    .loginbtn {
+        display: none;
+    }
+
+    .report-content {
+        flex-direction: column;
+    }
+
+    .report-form-section {
+        border-right: none;
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .report-map-section {
+        min-height: 400px;
+    }
+}
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }

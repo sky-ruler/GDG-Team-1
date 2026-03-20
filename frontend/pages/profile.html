@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/floating_sos.css">
+    <link rel="stylesheet" href="../css/nav_profile.css">
 </head>
 <body>
     <header class="header">
-        <div id="logo">LOGO</div>
+        <img id="logo" src="../resources/logo.png" alt="Safety Path Logo">
         <nav class="Nav">
             <a href="dashboard.html">Dashboard</a>
             <a href="route-analysis.html">Routes</a>
@@ -19,8 +21,14 @@
             <a href="report.html">Report</a>
             <a href="sos-center.html">SOS Center</a>
             <a href="profile.html" class="active">Profile</a>
-        </nav>
-        <button class="loginbtn" id="logoutBtn">Logout</button>
+        <div class="user-profile" id="logoutBtn">
+            <img src="../resources/nikhil.jpg" alt="User Profile" class="profile-pic">
+                        <span class="user-name">Welcome back, Nikhil</span>
+            <div class="profile-dropdown">
+
+                <a href="login.html">Log Out</a>
+            </div>
+        </div>
     </header>
 
     <div class="profile-container">
@@ -39,6 +47,8 @@
                 <button class="nav-item" data-target="privacy">Privacy Settings</button>
                 <button class="nav-item" data-target="guardians">Guardian Network</button>
                 <button class="nav-item" data-target="sos">SOS Preferences</button>
+                <button class="nav-item" style="color: #14B8A6; font-weight: 500;" onclick="window.location.href='volunteer.html'">&#9829; Volunteer Registration</button>
+                <button class="nav-item" style="color: #F59E0B; font-weight: 600;" onclick="window.location.href='volunteerdash.html'">&#9889; Volunteer Dashboard</button>
             </nav>
         </aside>
 
@@ -179,5 +189,7 @@
     <div id="toast" class="toast">Settings Saved Successfully</div>
 
     <script src="../Scripts/profile.js"></script>
+    <script src="../Scripts/nav.js"></script>
+    <button class="floating_sos" onclick="alert('SOS Triggered! Location and audio shared with emergency contacts.')">SOS</button>
 </body>
 </html>

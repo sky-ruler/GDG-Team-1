@@ -25,7 +25,7 @@ body {
     font-size:18px;
     font-weight:600;
     position:absolute;
-    left:40px;
+    left:20px;
 }
 
 .Nav{
@@ -344,4 +344,83 @@ input:checked + .slider:before {
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
+}
+
+/* New styles for menu toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 1001;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .Nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 72px);
+        background: #022038;
+        padding: 20px;
+        gap: 20px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .Nav.active {
+        left: 0;
+    }
+
+    .loginbtn {
+        display: none;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media(max-width:600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .toggle-switch {
+        align-self: flex-start;
+    }
+}
+
+
+/* Logo Image Styling */
+#logo, .footer_brand_logo, img.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
 }

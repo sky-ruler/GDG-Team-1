@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,13 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="../css/report.css">
+    <link rel="stylesheet" href="../css/floating_sos.css">
+    <link rel="stylesheet" href="../css/nav_profile.css">
 </head>
+
 <body>
     <header class="header">
-        <div id="logo">LOGO</div>
+        <img id="logo" src="../resources/logo.png" alt="Safety Path Logo">
         <nav class="Nav">
             <a href="dashboard.html">Dashboard</a>
             <a href="route-analysis.html">Routes</a>
@@ -22,7 +26,14 @@
             <a href="sos-center.html">SOS Center</a>
             <a href="profile.html">Profile</a>
         </nav>
-        <button class="loginbtn">Login / Sign Up</button>
+                <div class="user-profile">
+            <img src="../resources/nikhil.jpg" alt="User Profile" class="profile-pic">
+                        <span class="user-name">Welcome back, Nikhil</span>
+            <div class="profile-dropdown">
+
+                <a href="login.html">Log Out</a>
+            </div>
+        </div>
     </header>
 
     <div class="report-container">
@@ -35,7 +46,7 @@
             <!-- Form Section -->
             <div class="report-form-section">
                 <form id="incidentForm" class="incident-form">
-                    
+
                     <div class="form-group">
                         <label for="incidentType">Incident Type</label>
                         <select id="incidentType" required>
@@ -76,8 +87,10 @@
 
                     <div class="form-group">
                         <label>Location</label>
-                        <p class="location-help">Click on the map to mark the exact location, or let us use your current location.</p>
-                        <input type="text" id="location-coords" readonly placeholder="Select a point on the map" required>
+                        <p class="location-help">Click on the map to mark the exact location, or let us use your current
+                            location.</p>
+                        <input type="text" id="location-coords" readonly placeholder="Select a point on the map"
+                            required>
                     </div>
 
                     <button type="submit" class="submit-btn" id="submitReportBtn">Submit Report</button>
@@ -99,11 +112,16 @@
             <span class="close-btn">&times;</span>
             <div class="success-icon">&#10003;</div>
             <h2>Report Submitted!</h2>
-            <p>Thank you for contributing to SafePath. Your report is under review and will help make routes safer for everyone.</p>
-            <button class="modal-btn" onclick="document.getElementById('successModal').style.display='none'">Close</button>
+            <p>Thank you for contributing to SafePath. Your report is under review and will help make routes safer for
+                everyone.</p>
+            <button class="modal-btn"
+                onclick="document.getElementById('successModal').style.display='none'">Close</button>
         </div>
     </div>
 
     <script src="../Scripts/report.js"></script>
+    <script src="../Scripts/nav.js"></script>
+    <button class="floating_sos" onclick="alert('SOS Triggered! Location and audio shared with emergency contacts.')">SOS</button>
 </body>
+
 </html>
